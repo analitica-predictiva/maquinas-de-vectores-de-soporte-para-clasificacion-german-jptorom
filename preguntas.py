@@ -158,10 +158,10 @@ def pregunta_01():
     y = df["default"].values
 
     # Asigne una copia del dataframe `df` a la variable `X`.
-    x = df.copy()
+    X = df.copy()
 
     # Remueva la columna `default` del DataFrame `X`.
-    x = x.drop(columns="default") 
+    X = X.drop(columns="default") 
 
     # Retorne `X` y `y`
     return X, y
@@ -181,7 +181,7 @@ def pregunta_02():
     # Divida los datos de entrenamiento y prueba. La semilla del generador de números
     # aleatorios es 123. Use 100 patrones para la muestra de prueba.
     (X_train, X_test, y_train, y_test,) = train_test_split(
-        x,
+        X,
         y,
         test_size=100,
         random_state=123,
